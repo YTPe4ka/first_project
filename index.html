@@ -1,117 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advanced Animated Box Gallery</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./style2.css" />
     <style>
-        /* General Box Styles */
-.box-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 600px;
-    margin: 50px auto;
-}
+      /* General Box Styles */
+      .box-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        width: 600px;
+        margin: 50px auto;
+      }
 
-.box {
-    width: 150px;
-    height: 150px;
-    background-color: lightblue;
-    transition: transform 0.5s ease, background-color 0.5s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    perspective: 1000px;
-}
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: lightblue;
+        transition: transform 0.5s ease, background-color 0.5s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        perspective: 1000px;
+      }
 
-/* Pseudo-class styling */
-.box:nth-child(even) {
-    background-color: lightgreen;
-    transform: rotate(15deg);
-}
+      /* Pseudo-class styling */
+      .box:nth-child(even) {
+        background-color: lightgreen;
+        transform: rotate(15deg);
+      }
 
-.box:nth-child(odd) {
-    background-color: lightcoral;
-    transform: skew(10deg, 5deg);
-}
+      .box:nth-child(odd) {
+        background-color: lightcoral;
+        transform: skew(10deg, 5deg);
+      }
 
-.box:first-child {
-    background-color: lightyellow;
-    transform: translateY(-10px);
-}
+      .box:first-child {
+        background-color: lightyellow;
+        transform: translateY(-10px);
+      }
 
-.box:last-child {
-    background-color: lightgray;
-    transform: scale(1.2);
-}
+      .box:last-child {
+        background-color: lightgray;
+        transform: scale(1.2);
+      }
 
-/* Hover Transformations and Animations */
-.box:hover:nth-child(1) {
-    transform: translateX(100px) rotate(30deg);
-    background-color: gold;
-}
+      /* Hover Transformations and Animations */
+      .box:hover:nth-child(1) {
+        transform: translateX(100px) rotate(30deg);
+        background-color: gold;
+      }
 
-.box:hover:nth-child(2) {
-    transform: rotate(360deg) scale(1.5);
-    background-color: pink;
-}
+      .box:hover:nth-child(2) {
+        transform: rotate(360deg) scale(1.5);
+        background-color: pink;
+      }
 
-.box:hover:nth-child(3) {
-    transform: skew(15deg, 30deg) translate(50px, -50px);
-    background-color: skyblue;
-}
+      .box:hover:nth-child(3) {
+        transform: skew(15deg, 30deg) translate(50px, -50px);
+        background-color: skyblue;
+      }
 
-.box:hover:nth-child(4) {
-    transform: rotateX(360deg);
-    background-color: lime;
-}
+      .box:hover:nth-child(4) {
+        transform: rotateX(360deg);
+        background-color: lime;
+      }
 
-.box:hover:nth-child(5) {
-    transform: rotateY(360deg);
-    background-color: violet;
-}
+      .box:hover:nth-child(5) {
+        transform: rotateY(360deg);
+        background-color: violet;
+      }
 
-.box:hover:nth-child(6) {
-    transform: rotateZ(360deg);
-    background-color: orange;
-}
+      .box:hover:nth-child(6) {
+        transform: rotateZ(360deg);
+        background-color: orange;
+      }
 
-/* Complex Animation for the last box */
-@keyframes complexMove {
-    0% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: translate(100px, 100px) scale(1.2) rotate(45deg);
-    }
-    50% {
-        transform: translate(200px, -100px) scale(0.8) rotate(90deg);
-    }
-    75% {
-        transform: translate(-100px, -200px) scale(1.5) rotate(135deg);
-    }
-    100% {
-        transform: translate(0, 0) scale(1) rotate(180deg);
-    }
-}
+      /* Complex Animation for the last box */
+      @keyframes complexMove {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(100px, 100px) scale(1.2) rotate(45deg);
+        }
+        50% {
+          transform: translate(200px, -100px) scale(0.8) rotate(90deg);
+        }
+        75% {
+          transform: translate(-100px, -200px) scale(1.5) rotate(135deg);
+        }
+        100% {
+          transform: translate(0, 0) scale(1) rotate(180deg);
+        }
+      }
 
-.box:nth-child(6) {
-    animation: complexMove 5s infinite cubic-bezier(0.42, 0, 0.58, 1);
-    animation-delay: 2s;
-    animation-direction: alternate-reverse;
-    animation-fill-mode: both;
-}
-
+      .box:nth-child(6) {
+        animation: complexMove 5s infinite cubic-bezier(0.42, 0, 0.58, 1);
+        animation-delay: 2s;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: both;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="box-gallery">
-        <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
-        <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
-        <div class="box">kjhbdfjvbjdfbvjfhjhbdbjvhdjf</div>
-        <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
-        <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
-        <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhjhbdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+      <div class="box">kjhbdfjvbjdfbvjfhdbjvhdjf</div>
+
+      <h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est facere
+        dolor dicta incidunt reiciendis quae, autem omnis delectus cumque
+        laboriosam maiores nam aliquam tempora libero possimus eveniet, officia
+        a aliquid qui, tempore rerum quam. Voluptas, perferendis. Quos aut animi
+        praesentium atque, dolorum assumenda eius quaerat id ratione voluptate
+        hic eaque, magni aliquam veniam nesciunt dolore corrupti, harum
+        similique corporis? Cum perspiciatis, aut aliquid ipsam consequuntur
+        consectetur assumenda laborum! Odio voluptatum pariatur a earum suscipit
+        eius provident deserunt consequuntur delectus animi facilis sint cum,
+        repellat cumque sit eligendi mollitia praesentium debitis nemo!
+        Obcaecati voluptatem minus porro at qui, fugit natus illum eveniet
+        quibusdam sit aliquid unde consectetur. Rerum veniam exercitationem,
+        laborum ex repellat minus aspernatur et facere excepturi quisquam
+        quibusdam tempora assumenda fugit, minima distinctio possimus. Suscipit
+        architecto vero placeat veniam ratione laudantium fugiat deserunt quam
+        reiciendis laborum saepe distinctio cupiditate iusto incidunt dolores
+        blanditiis porro delectus, amet unde dolorem voluptate? Iure corrupti
+        corporis nobis laudantium officia, fugit expedita illum asperiores culpa
+        sequi suscipit fuga voluptates veritatis optio esse eaque debitis quis
+        repudiandae hic, porro provident, quasi ut neque. Nisi quis quas minima
+        a placeat. Totam tenetur omnis laboriosam eligendi velit. Totam, fuga
+        beatae illo accusantium repellendus deleniti nobis aliquid animi
+        officiis delectus quaerat? Error nihil iste quis. Deserunt sed qui optio
+        aut commodi. Velit eligendi eius sapiente magni saepe consequuntur
+        laborum molestias repellat nam voluptate, officiis, quidem sequi
+        reiciendis deleniti earum tempore repellendus accusantium sed commodi
+        inventore deserunt! Voluptatum libero repellat explicabo, minus nam
+        reprehenderit illum? Recusandae exercitationem omnis, error tempora ut
+        velit tempore labore esse ducimus maiores, voluptatibus consectetur quia
+        hic quasi sit nulla ad iste vitae. Odit vitae tenetur minima est,
+        eveniet error officia maiores consequatur doloribus voluptatibus harum
+        velit blanditiis earum expedita qui omnis ipsa praesentium consequuntur
+        ut. Et saepe accusamus, eius neque vel veritatis cupiditate commodi
+        nesciunt ipsam quos ea deleniti consequatur, exercitationem similique
+        eveniet rerum expedita iure deserunt voluptatem veniam aperiam optio sit
+        nihil iste! Perferendis incidunt deserunt, nesciunt omnis repellat
+        accusantium nostrum dolorem itaque nihil hic voluptate error laborum
+        adipisci eos ducimus rem vero dolorum quam saepe possimus recusandae
+        quis aliquid? Consequatur fugit tenetur dolore delectus soluta magnam,
+        fuga cumque rerum molestias. Quo consectetur alias et assumenda, vero
+        officia laudantium pariatur fugiat, culpa, quidem doloribus? Tenetur
+        possimus amet expedita corporis pariatur cupiditate quae labore nihil
+        aliquam fuga, veritatis maxime hic voluptatibus temporibus voluptas.
+        Quas saepe veniam repellendus natus, amet quam illo blanditiis, totam
+        magni quidem sapiente, autem a quod dolore non libero incidunt corporis
+        quos! Reprehenderit eligendi ut, tempora reiciendis ducimus repellendus
+        ratione, placeat impedit dolorem quisquam accusantium voluptatum
+        laudantium error, incidunt rerum. Incidunt deserunt cumque quibusdam
+        ratione ipsam minima explicabo possimus. Blanditiis quam ipsum minima
+        asperiores? Error id quod in, pariatur perspiciatis officiis dignissimos
+        perferendis itaque.
+      </h1>
     </div>
-</body>
+  </body>
 </html>
